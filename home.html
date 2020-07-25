@@ -2,11 +2,88 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="main.css">
 <meta name="viewport" content="width=device-width, initial-scale=1" >
 	<title> Responsive Layout</title>
-
 </head>
+<style type="text/css">
+/**** Base styles *****/	
+* {
+	box-sizing: border-box;
+}
+h1 {
+	margin-bottom: 20px
+}
+.inside {
+	text-align: justify;
+	background-color: gray;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: Verdana;
+	color: black;
+}
+/* Simple Responsive Framework. */
+.row {
+	width: 100%;
+}
+
+/***************** Large devices only ********************/
+@media (min-width: 992px) {
+	.col-lg-4{
+		float: left;
+		border: 2px solid black;
+		margin: 10px;
+	}
+	.col-lg-4 {
+		width: 30%;
+	}
+}
+
+/***************** Medium devices only ********************/
+@media (min-width: 768px) and (max-width: 991px) {
+	.col-md-6, .col-md-12{
+		float: left;
+		border: 2px solid black;
+		margin: 10px;
+	}
+	.col-md-6 {
+		width: 47%;
+	}
+	.col-md-12 {
+		width: 96%;
+	}
+}
+
+/***************** Small devices only ********************/
+/*aqui va la anchura mínima del dispositivo y la anchura máxima del dispositivo*/
+@media (max-width: 767px) {
+	.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
+	.col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{
+		float: left;
+		border: 2px solid black;
+		margin: 10px;
+
+	}
+	.col-sm-12 {
+		width: 96%;
+	}
+}
+.nam {
+	border: 1px solid black;
+	background-color: gray;
+}
+.asd {
+	margin-top: 0px;
+	text-align: center;
+	margin-left: 75%;
+	border-left: 2px;
+	font-size: large;
+	border-left-style: solid;
+	border-bottom: 2px;
+	border-bottom-style: solid;
+	font-family: fantasy;
+}
+</style>
 <body>
 	<h1 style="font-family: fantasy;text-align: center">Our Menu</h1>
 	<div class="row">
